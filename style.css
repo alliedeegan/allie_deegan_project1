@@ -14,6 +14,12 @@ html {
     font-family: 'Cormorant Garamond', serif;
 }
 
+.wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -23,13 +29,6 @@ a:link,
 a:visited {
     text-decoration: none;
     color: #fff;
-}
-
-.wrapper {
-    width: 80%;
-    max-width: 1280px;
-    margin: 0 auto;
-    border: 1px solid yellowgreen;
 }
 
 img {
@@ -103,7 +102,6 @@ p {
 }
 
 
-
 /* ----- HEADER STYLES ----- */
 
 header {
@@ -128,11 +126,9 @@ header {
 
 .mainNav li:hover {
     border-bottom: 2px solid #fff;
-
 }
 
 .wrapper > h1 {
-    border: 1px solid orange;
     text-align: center;
     line-height: 0.75;
     margin: 110px 0 0;
@@ -142,7 +138,6 @@ header {
 .socialLinks {
     float: right;
     margin: 10px 50px 0;
-    border: 1px solid orange;
 }
 
 .socialLinks li {
@@ -157,8 +152,7 @@ header {
 }
 
 .socialLinks i {
-    font-size: 24px;
-    
+    font-size: 24px;   
 }
 
 .hamburger {
@@ -225,10 +219,21 @@ header {
     margin: 0 0 30px;
 }
 
+
 /* ----- NEWS STYLES ----- */
 
 .news {
     width: 100%;
+}
+
+.news1 .articleText,
+.news1 .articleImg {
+    float: right;
+}
+
+.news2 .articleText,
+.news2 .articleImg {
+    float: left;
 }
 
 .articleText {
@@ -240,6 +245,7 @@ header {
     font-size: 1.75rem;
     margin: 0;
     font-weight: 600;
+    width: 90%;
 }
 
 .articleText p {
@@ -258,14 +264,13 @@ header {
 }
 
 .articleTextContent {
-    border: 1px solid purple;
     padding-top: 100px;
 }
 
 .articleImg {
     width: 50%;
-    float: left;
 }
+
 
 /* -----  ADDITIONAL LINKS ----- */
 
@@ -276,15 +281,13 @@ header {
 }
 
 .links {
-    border: 1px solid tomato;
     margin: 0 auto;
     width: 70%;
 }
 
 .link {
-    border: 1px solid yellow;
     width: 33.33%;
-    float: left;
+    float: right;
     margin: 110px 0 90px;;
 }
 
@@ -295,6 +298,7 @@ header {
     text-align: center;
     transition: all 0.3s;
 }
+
 .link:hover {
     cursor: pointer;
 }
@@ -353,7 +357,7 @@ header {
 
 .footerNewsletter input[type="submit"] {
     height: 100%;
-    width: 25%;
+    min-width: 25%;
     border: 2px solid #000;
     margin-left: -5px;
     position: relative;
@@ -364,6 +368,7 @@ header {
     text-transform: uppercase;
     font-size: 0.9rem;
     transition: all 0.3s;
+    display: inline-block;
 }
 
 .footerNewsletter input[type="submit"]:hover {
@@ -375,7 +380,6 @@ header {
     width: calc(40% - 110px);
     float: left;
     margin-left: 110px;
-    border: 1px solid yellow;
 }
 
 .footerContact h5 {
@@ -396,7 +400,6 @@ header {
 }
 
 .footerNav li{
-    border: 1px solid green;
     float: right;
     display: block;
     margin: 3px 0;
@@ -409,6 +412,11 @@ header {
     font-size: 1rem;
     text-transform: uppercase;
 }
+
+.footerNav li a:hover {
+    color: rgba(24, 51, 153, 0.78);
+}
+
 
 /* ----- FOOTER BOTTOM STYLES ----- */
 
@@ -480,7 +488,6 @@ header {
     .wrapper h1 {
         font-size: 3rem;
     }
-
 }
 
 
@@ -528,6 +535,7 @@ header {
     } 
 }
 
+
 /*  - HIGHLIGHT QUERIES - */
 
 @media (max-width: 1080px) {
@@ -561,6 +569,7 @@ header {
     }
     .highlightText p {
         text-align: left;
+        line-height: 1.5;
     }
 }
 
@@ -571,6 +580,9 @@ header {
     .highlightText h2 {
         font-size: 1.75rem;
     }
+    .highlight {
+        margin: 51px 0;
+    }
 }
 
 @media (max-width: 500px) {
@@ -580,9 +592,6 @@ header {
 }
 
 @media (max-width:400px) {
-    .highlight {
-        margin: 51px 0;
-    }
     .highlightImg {
         width: 80%;
         float: none;
@@ -612,20 +621,166 @@ header {
 /*  - NEWS QUERIES - */
 
 @media (max-width: 1210px) {
-    .articleText{
+    .articleText {
         width: 50%;
     }
-    .articleImg {
-        width: 35%;
+    .news1 .articleText,
+    .news2 .articleText {
+        margin: 0;
     }
     .articleTextContent {
-        padding-top: 0px;
+        padding: 0 50px;
+    }
+    .articleText h3 {
+        font-size: 1.4rem;
+    }
+    .articleImg {
+        width: 50%;
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:1050px){
+    .articleText h3 {
+        font-size: 1.25rem;
+    }
+    .articleText p {
+        font-size: 0.9rem;
+    }
+}
 
+@media (max-width: 964px){
+    .news1 .articleText,
+    .news2 .articleText {
+        width: 100%;
+        float: none;
+        padding: 0 10%;
+        text-align: center;
+        margin: 51px 0;
+    }
+    .news1 .articleImg,
+    .news2 .articleImg {
+        width: 50%;
+        float: none;
+        margin: 0 auto;
+    }
+    .articleText h3 {
+        font-size: 1.75rem;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 864px){
+    .articleText h3 {
+        font-size: 1.5rem;
+    }
+    .news1 .articleImg,
+    .news2 .articleImg {
+        width: 70%;
+    }
+    .news1 .articleTextContent,
+    .news2 .articleTextContent {
+        padding: 0;
+    }
+}
+
+@media (max-width: 680px){
+    .news1 .articleText,
+    .news2 .articleText {
+        margin: 51px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .news1 .articleImg,
+    .news2 .articleImg {
+        width: 100%;
+    }
+    .articleText h3 {
+        font-size: 1.1rem;
+    }
+    .articleText p {
+        font-size: 0.9rem;
+    }
+}
+
+/* - ADDITIONAL LINKS - */
+
+@media (max-width: 1020px) {
+    .link h4 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 760px){
+    .link {
+        float: none;
+        margin: 0 auto;
+        padding-top: 51px;
+        width: 100%;
+    }
+    .link:nth-of-type(3) {
+        padding-bottom: 42px;
+    }
+    .link h4 {
+        font-size: 1.364rem;
+    }
 }
 
 
-/* Add vendor prefixes at end. cmd shift p, search autoprefix and apply */
+/* - FOOTER TOP LINKS - */
+
+@media (max-width: 1120px){
+    .footerNewsletter {
+        width: 40%;
+    }
+    .footerNewsletter input {
+        display: block;
+    }
+    .footerNewsletter input[type="email"] {
+        width: 100%;
+    }
+    .footerNewsletter input[type="submit"] {
+        width: 100%;
+        margin: 0;
+    }  
+}
+
+@media (max-width: 860px){
+    .footerTop {
+        padding: 41px 0 37px;
+    }
+    .footerNewsletter {
+        width: 60%;
+        float: none;
+        margin: 0 auto 93px;
+        text-align: center;
+    }
+    .footerNewsletter input[type="email"]{
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .footerContact {
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+@media (max-width: 640px) {
+    .footerNewsletter {
+        width: 100%;
+    }
+    .footerNewsletter p{
+        font-size: 0.8rem;
+    }
+    .footerContact p {
+        font-size: 0.7rem;
+    }
+}
+
+
+/* - FOOTER BOTTOM LINKS - */
+@media (max-width: 640px){
+    .footerBottom p {
+        font-size: 0.7rem;
+    }
+}
